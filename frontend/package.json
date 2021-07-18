@@ -1,7 +1,4 @@
 {
-  "name": "mytweetdeck",
-  "version": "1.0.0",
-  "description": "MyTweetDeck",
   "scripts": {
     "build": "webpack -p --progress --config webpack.config.js",
     "dev-build": "webpack --progress -d --config webpack.config.js",

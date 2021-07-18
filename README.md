@@ -6,16 +6,16 @@ https://mytweetdeck.herokuapp.com
 
 #### ~/MyTweetDeck
 
-```shell
+```sh
 $ pip install -r requirements.txt
 $ cp .env.example .env
 $ $EDITOR .env
-$ python3 main.py
+$ python main.py
 ```
 
 #### ~/MyTweetDeck/frontend
 
-```shell
+```sh
 # Install
 $ npm install
 
@@ -30,7 +30,7 @@ $ npm run watch
 
 ### Docker
 
-```shell
+```sh
 # Create and Start
 $ docker-compose up -d
 
@@ -46,12 +46,12 @@ $ docker-compose down (--rmi all)
 
 ### Heroku
 
-```shell
-$ heroku git:remote --app YOUR_APP
-$ heroku config:set TWITTER_CONSUMER_KEY="EXAMPLE"
-$ heroku config:set TWITTER_CONSUMER_SECRET="EXAMPLE"
-$ heroku config:set OAUTH_CALLBACK="https://example.herokuapp.com"
-$ heroku config:add TZ=Asia/Tokyo
+```sh
+$ heroku git:remote --app app
+$ heroku config:set TWITTER_CONSUMER_KEY="XXXXXXXXXX"
+$ heroku config:set TWITTER_CONSUMER_SECRET="XXXXXXXXXX"
+$ heroku config:set OAUTH_CALLBACK="https://XXXXXXXXXX.herokuapp.com"
+$ heroku config:add TZ="Asia/Tokyo"
 $ git push heroku master
 ```
 
@@ -59,14 +59,14 @@ $ git push heroku master
 
 #### Local
 
-```shell
+```sh
 # Login
 $ ssh -i ~/.ssh/example.pem ec2-user@{ELASTIC_IP}
 ```
 
 #### EC2
 
-```shell
+```sh
 # Update
 $ sudo yum update -y
 
@@ -83,7 +83,7 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 $ sudo yum install git
 
 # Deploy
-$ git clone https://github.com/{USERNAME}/MyTweetDeck.git
+$ git clone https://github.com/${USER}/MyTweetDeck.git
 $ cd ~/MyTweetDeck
 $ cp .env.example .env
 $ $EDITOR .env
